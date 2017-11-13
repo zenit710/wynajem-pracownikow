@@ -1,8 +1,30 @@
-let nav = document.getElementsByClassName('navbar')[0],
-    barsButton = nav.getElementsByClassName('mobile-bars')[0],
-    linkSection = nav.getElementsByClassName('links')[0];
+let Navigation = function (navbar) {
+    this.navbar = navbar;
+    this.barsButton = navbar.getElementsByClassName('mobile-bars')[0];
+    this.linkSection = navbar.getElementsByClassName('links')[0];
+    this.initialized = false;
 
-barsButton.addEventListener('click', function () {
-    linkSection.classList.toggle('show');
-    barsButton.classList.toggle('active');
-});
+    this.init();
+};
+
+Navigation.prototype.init = function () {
+    if (!this.initialized) {
+        bindBarButtonEvents();
+
+        function bindBarButtonEvents() {
+            this.barsButton.addEventListener('click', () => {
+                this.linkSection.classList.toggle('show');
+                this.barsButton.classList.toggle('active');
+            });
+        }
+
+        this.initialized = true;
+    }
+};
+
+let navbars = document.getElementsByClassName('navbar'),
+    nav = null;
+
+if (navbars.length) {
+    nav = new Navigation(navbars[0]);
+}
