@@ -9,14 +9,14 @@ let Navigation = function (navbar) {
 
 Navigation.prototype.init = function () {
     if (!this.initialized) {
-        bindBarButtonEvents();
-
-        function bindBarButtonEvents() {
+        let bindBarButtonEvents = () => {
             this.barsButton.addEventListener('click', () => {
                 this.linkSection.classList.toggle('show');
                 this.barsButton.classList.toggle('active');
             });
-        }
+        };
+
+        bindBarButtonEvents();
 
         this.initialized = true;
     }
