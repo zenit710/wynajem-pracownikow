@@ -66,9 +66,10 @@
 
 @media screen and (min-width: $tablet) {
   .navbar {
-    background: $menuBgColorDesktop;
+    background-color: $menuBgColorDesktop;
     position: fixed;
     width: 100%;
+    transition: background-color .3s;
 
     nav {
       ul {
@@ -89,6 +90,16 @@
 
         &.links {
           max-height: none;
+        }
+      }
+    }
+
+    &.scrolled {
+      background-color: #FFF;
+
+      ul {
+        li a:not([role=button]) {
+          color: $menuFontColor;
         }
       }
     }

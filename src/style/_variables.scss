@@ -8,9 +8,24 @@ $xl-monitor: 1400px;
 $xxl-monitor: 1600px;
 
 /* COLORS */
-$leadingColor: #FA000F;
-$leadingColorDark: #960009;
+$leadingColorDark: #FA000F;
+$leadingColor: #960009;
+$standardGrey: #888;
 $menuBgColor: #FFF;
-$menuFontColor: rgba(0,0,0,.5);
+$menuFontColor: $standardGrey;
 $menuFontColorActive: $leadingColor;
 $menuBgColorDesktop: transparent;
+
+/* MIXINS */
+@mixin button($bgColor, $hoverColor, $fontColor) {
+  background-color: $bgColor;
+  color: $fontColor;
+  border: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $hoverColor;
+  }
+}

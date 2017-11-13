@@ -1,0 +1,17 @@
+#about {
+  text-align: center;
+  background-color: $leadingColor;
+  color: #FFF;
+  padding: 8rem 0;
+
+  .row {
+    h1, div, a {
+      margin: 10px auto 10px auto;
+    }
+
+    a {
+      @include button(#FFF, #CCC, #000)
+    }
+  }
+
+}
