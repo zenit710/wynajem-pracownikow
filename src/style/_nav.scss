@@ -1,0 +1,92 @@
+nav {
+  ul {
+    overflow: hidden;
+    background: $menuBgColor;
+    color: $menuFontColor;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+
+    &.brand {
+      li {
+        width: auto;
+        float: left;
+
+        &.mobile-bars {
+          float: right;
+          font-size: 40px;
+
+          &:active {
+            background: transparent;
+          }
+
+          a {
+            color: $menuFontColorActive;
+            transition: color .3s;
+          }
+
+          &.active {
+            a {
+              color: $menuFontColor;
+            }
+          }
+        }
+      }
+    }
+
+    &.links {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .3s;
+
+      &.show {
+        max-height: 300px;
+      }
+
+      li {
+        a:not([role=button]) {
+          border: none;
+
+          &.active, &:active, &:hover {
+            color: $menuFontColorActive;
+            background: transparent;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  body {
+    background: #eee;
+  }
+
+  .navbar {
+    background: $menuBgColorDesktop;
+
+    nav {
+      ul {
+        background: $menuBgColorDesktop;
+
+        li a {
+          transition: color .3s;
+        }
+
+        &.brand {
+          li {
+            &.mobile-bars {
+              display: none;
+            }
+          }
+        }
+
+        &.links {
+          max-height: none;
+        }
+      }
+    }
+  }
+}
