@@ -1,0 +1,40 @@
+header {
+  background: url('../../img/main.jpg') center center;
+  background-size: cover;
+  overflow: hidden;
+  padding: 10rem 0;
+
+  .row {
+    text-align: center;
+
+    h1, div, a {
+      margin: 10px auto 10px auto;
+      color: #FFF;
+    }
+
+    a {
+      background-color: $leadingColor;
+      color: #FFF;
+      border: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: background-color 0.2s;
+
+      &:hover {
+        background-color: $leadingColorDark;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: $tablet) {
+  header {
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+
+    .wrapper {
+      margin: auto;
+    }
+  }
+}

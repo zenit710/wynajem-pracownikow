@@ -1,57 +1,62 @@
-nav {
-  ul {
-    overflow: hidden;
-    background: $menuBgColor;
-    color: $menuFontColor;
+.navbar {
+  margin-bottom: 0;
+  background-color: $menuBgColor;
 
-    img {
-      width: 50px;
-      height: 50px;
-    }
+  nav {
+    ul {
+      overflow: hidden;
+      background: $menuBgColor;
+      color: $menuFontColor;
 
-    &.brand {
-      li {
-        width: auto;
-        float: left;
+      img {
+        width: 50px;
+        height: 50px;
+      }
 
-        &.mobile-bars {
-          float: right;
-          font-size: 40px;
+      &.brand {
+        li {
+          width: auto;
+          float: left;
 
-          &:active {
-            background: transparent;
-          }
+          &.mobile-bars {
+            float: right;
+            font-size: 40px;
 
-          a {
-            color: $menuFontColorActive;
-            transition: color .3s;
-          }
+            &:active {
+              background: transparent;
+            }
 
-          &.active {
             a {
-              color: $menuFontColor;
+              color: $menuFontColorActive;
+              transition: color .3s;
+            }
+
+            &.active {
+              a {
+                color: $menuFontColor;
+              }
             }
           }
         }
       }
-    }
 
-    &.links {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .3s;
+      &.links {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height .3s;
 
-      &.show {
-        max-height: 300px;
-      }
+        &.show {
+          max-height: 300px;
+        }
 
-      li {
-        a:not([role=button]) {
-          border: none;
+        li {
+          a:not([role=button]) {
+            border: none;
 
-          &.active, &:active, &:hover {
-            color: $menuFontColorActive;
-            background: transparent;
+            &.active, &:active, &:hover {
+              color: $menuFontColorActive;
+              background: transparent;
+            }
           }
         }
       }
@@ -60,19 +65,18 @@ nav {
 }
 
 @media screen and (min-width: $tablet) {
-  body {
-    background: #eee;
-  }
-
   .navbar {
     background: $menuBgColorDesktop;
+    position: fixed;
+    width: 100%;
 
     nav {
       ul {
         background: $menuBgColorDesktop;
 
-        li a {
+        li a:not([role=button]) {
           transition: color .3s;
+          color: #FFF;
         }
 
         &.brand {
