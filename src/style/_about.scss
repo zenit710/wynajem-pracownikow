@@ -1,5 +1,22 @@
 #about {
   text-align: center;
+  background-color: #FFF;
+  color: #000;
+  padding: 8rem 0;
+
+  .row {
+    h1, div, a {
+      margin: 10px auto 10px auto;
+    }
+
+    a {
+      @include button($leadingColor, $leadingColorDark, #FFF)
+    }
+  }
+}
+
+#why-we {
+  text-align: center;
   background-color: $leadingColor;
   color: #FFF;
   padding: 8rem 0;
@@ -13,5 +30,4 @@
       @include button(#FFF, #CCC, #000)
     }
   }
-
 }
