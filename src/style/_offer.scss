@@ -19,49 +19,40 @@
   }
 }
 
-.swiper-container {
-  width: 100%;
-  height: 500px;
+#jobs {
+  text-align: center;
+  background-color: $leadingColor;
+  color: #FFF;
+  padding: 8rem 0;
 
-  .swiper-slide {
-    background-position: center center;
-    background-size: cover;
-    position: relative;
-    
-    div {
-      background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%); /* FF3.6-15 */
-      background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* Chrome10-25,Safari5.1-6 */
-      background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
-      color: #FFF;
-      position: absolute;
-      bottom: 0;
-      width: 100%;
-      padding: 50px 0 10px 0;
+  .row {
+    h2, div, a {
+      margin: 10px auto 10px auto;
     }
 
-    &.production {
-      background-image: url(../../img/production.jpg);
+    a {
+      @include button(#FFF, #CCC, #000)
     }
+  }
 
-    &.magazine {
-      background-image: url(../../img/magazine.jpg);
-    }
+  .jobs {
+    .job {
+      position: relative;
+      background-size: cover;
+      background-position: center center;
+      max-width: 300px;
 
-    &.builder {
-      background-image: url(../../img/build.jpg);
-    }
+      img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 100%;
+        display: block;
+        transition: all .2s ease-in-out;
 
-    &.communium {
-      background-image: url(../../img/forest.jpg);
-    }
-
-    &.villam {
-      background-image: url(../../img/forest.jpg);
-    }
-
-    &.welder {
-      background-image: url(../../img/forest.jpg);
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
     }
   }
 }
