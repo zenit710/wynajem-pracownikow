@@ -1,0 +1,26 @@
+#contact {
+  text-align: center;
+  background-color: $leadingColor;
+  color: #FFF;
+  padding: 8rem 0;
+
+  .row {
+    h2, div, a {
+      margin: 10px auto 10px auto;
+    }
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  i {
+    margin-bottom: 10px;
+  }
+
+  a {
+    color: #000;
+  }
+}
