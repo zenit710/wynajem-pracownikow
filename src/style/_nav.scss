@@ -96,6 +96,7 @@
 
     &.scrolled {
       background-color: #FFF;
+      z-index: 1;
 
       ul {
         li a:not([role=button]) {
