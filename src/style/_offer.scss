@@ -37,20 +37,26 @@
 
   .jobs {
     .job {
-      position: relative;
       background-size: cover;
       background-position: center center;
       max-width: 300px;
 
-      img {
+      .img-holder {
         max-width: 100%;
         height: auto;
         border-radius: 100%;
         display: block;
-        transition: all .2s ease-in-out;
+        overflow: hidden;
 
-        &:hover {
-          transform: scale(1.1);
+        img {
+          max-width: 100%;
+          height: auto;
+          transition: all .2s ease-in-out;
+          display: block;
+
+          &:hover {
+            transform: scale(1.1);
+          }
         }
       }
     }

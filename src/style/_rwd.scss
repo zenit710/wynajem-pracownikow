@@ -1,0 +1,39 @@
+$breakpointList: (
+  $phablet	            xs,
+  $tablet	            sm,
+  $tablet-landscape	    md,
+  $large-monitor	    lg,
+  $xl-monitor	        xl,
+  $xxl-monitor	        xxl
+);
+
+$percentWidth: (
+  1   8.3333%,
+  2   16.6666%,
+  3   25%,
+  4   33.3333%,
+  5   41.6666%,
+  6   50%,
+  7   58.3333%,
+  8   66.6666%,
+  9   75%,
+  10  83.3333%,
+  11  91.6666%,
+  12  100%
+);
+
+@each $percent in $percentWidth {
+  .col-xxs-#{nth($percent, 1)} {
+    width: calc(#{nth($percent, 2)} - 15px);
+  }
+}
+
+@each $breakpoint in $breakpointList {
+  @media screen and (min-width: #{nth($breakpoint, 1)}) {
+    @each $percent in $percentWidth {
+      .col-#{nth($breakpoint, 2)}-#{nth($percent, 1)} {
+        width: calc(#{nth($percent, 2)} - 15px);
+      }
+    }
+  }
+}
