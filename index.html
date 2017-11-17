@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="dist/css/kickstart.min.css" />
     <link rel="stylesheet" href="dist/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="dist/css/photoswipe.css">
+    <link rel="stylesheet" href="dist/css/default-skin/default-skin.css">
     <link rel="stylesheet" href="dist/css/internal/style.css" />
     <title>KT Komplex Service AB - wynajem pracowników</title>
 </head>
@@ -215,27 +217,64 @@
             <div class="row">
                 <div class="col-6 col-md-3 img-holder">
                     <img src="dist/img/cert/Ansvar_Miljopolicy_1.jpg"
-                         data-pages="dist/img/cert/Ansvar_Miljopolicy_1.jpg|dist/img/cert/Ansvar_Miljopolicy_2.jpg|dist/img/cert/Ansvar_Miljopolicy_3.jpg"
+                         data-items='[{"src":"dist/img/cert/Ansvar_Miljopolicy_1.jpg","w":1700,"h":2338},{"src":"dist/img/cert/Ansvar_Miljopolicy_2.jpg","w":1700,"h":2338},{"src":"dist/img/cert/Ansvar_Miljopolicy_3.jpg","w":1700,"h":2338}]'
                          alt="Ansvar-Miljöpolicy" />
                 </div>
                 <div class="col-6 col-md-3 img-holder">
                     <img src="dist/img/cert/Betankande_14001_1996.jpg"
-                         data-pages="dist/img/cert/Betankande_14001_1996.jpg"
+                         data-items='[{"src":"dist/img/cert/Betankande_14001_1996.jpg","w":1700,"h":2338}]'
                          alt="Betänkande 14001 (1996)" />
                 </div>
                 <div class="col-6 col-md-3 img-holder">
                     <img src="dist/img/cert/Policy_Kvalitet_9001_Miljo_14001.jpg"
-                         data-pages="dist/img/cert/Policy_Kvalitet_9001_Miljo_14001.jpg"
+                         data-items='[{"src":"dist/img/cert/Policy_Kvalitet_9001_Miljo_14001.jpg","w":1700,"h":2338}]'
                          alt="Policy Kvalitet 9001 Miljö 14001" />
                 </div>
                 <div class="col-6 col-md-3 img-holder">
                     <img src="dist/img/cert/Systematisk_arbetsmiljoarbete_1.jpg"
-                         data-pages="dist/img/cert/Systematisk_arbetsmiljoarbete_1.jpg|dist/img/cert/Systematisk_arbetsmiljoarbete_2.jpg"
+                         data-items='[{"src":"dist/img/cert/Systematisk_arbetsmiljoarbete_1.jpg","w":1700,"h":2338},{"src":"dist/img/cert/Systematisk_arbetsmiljoarbete_2.jpg","w":1700,"h":2338}]'
                          alt="Systematisk arbetsmiljöarbete" />
                 </div>
             </div>
         </div>
     </section>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer id="contact">
         <div class="wrapper">
@@ -265,6 +304,8 @@
 
     <script type="text/javascript" src="dist/js/kickstart.min.js"></script>
     <script type="text/javascript" src="dist/js/scrollTo.js"></script>
+    <script type="text/javascript" src="dist/js/photoswipe.min.js"></script>
+    <script type="text/javascript" src="dist/js/photoswipe-ui-default.min.js"></script>
     <script type="text/javascript" src="dist/js/internal/scripts.js"></script>
 </body>
 </html>
