@@ -1,14 +1,7 @@
-let PhotoModal = function (selector, modal) {
+let PhotoModal = function (selector) {
     this.selector = selector;
     this.imgArray = JSON.parse(selector.dataset.items);
     this.title = selector.attributes.alt.value;
-    this.modal = {
-        selector: modal,
-        title: modal.getElementsByClassName('modal-header')[0],
-        body: modal.getElementsByTagName('main')[0],
-        prevBtn: modal.getElementsByClassName('photo-modal-prev')[0],
-        nextBtn: modal.getElementsByClassName('photo-modal-next')[0]
-    };
     this.initialized = false;
 
     this.init();
@@ -34,9 +27,8 @@ PhotoModal.prototype.attachClickEvent = function () {
     });
 };
 
-let photos = document.querySelectorAll('img[data-items]'),
-    modal = document.getElementById('photo-modal');
+let photos = document.querySelectorAll('img[data-items]');
 
 for (let i = 0; i < photos.length; i++) {
-    new PhotoModal(photos[i], modal);
+    new PhotoModal(photos[i]);
 }
