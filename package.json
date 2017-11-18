@@ -1,9 +1,9 @@
 {
   "name": "wynajem-pracownikow",
   "version": "1.0.0",
-  "description": "",
+  "description": "One page firmy wynajmującej pracowników",
   "scripts": {
-    "build": "gulp clean build"
+    "build": "gulp build"
   },
   "author": "Kamil Małek <malek.kamil@outlook.com>",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "gulp-clean-css": "^3.9.0",
     "gulp-cli": "^1.4.0",
     "gulp-concat": "^2.6.1",
+    "gulp-imageoptim": "^1.0.9",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
     "gulp-uglify": "^3.0.0"
