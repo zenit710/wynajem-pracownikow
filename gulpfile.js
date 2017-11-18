@@ -56,7 +56,7 @@ gulp.task("img", function () {
         .pipe(gulp.dest("./dist/img"));
 });
 
-gulp.task("build", ["minify-css", "minify-js"]);
+gulp.task("build", ["minify-css", "minify-js", "img"]);
 
 gulp.task("watch", function () {
     gulp.watch("./src/style/**/*.scss", ["sass"]);
