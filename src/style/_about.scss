@@ -39,4 +39,8 @@
       @include button(#FFF, #CCC, #000)
     }
   }
+
+  ul {
+    list-style: none;
+  }
 }
