@@ -48,7 +48,7 @@ gulp.task("minify-js", ["js"], function () {
         .pipe(gulp.dest("./dist/js/internal"));
 });
 
-gulp.task("build", ["minify-css"]);
+gulp.task("build", ["minify-css", "minify-js"]);
 
 gulp.task("watch", function () {
     gulp.watch("./src/style/**/*.scss", ["sass"]);
