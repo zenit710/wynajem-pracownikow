@@ -56,9 +56,17 @@ Navigation.prototype.init = function () {
             });
         };
 
+        let bindResizeEvent = () => {
+            window.addEventListener('resize', () => {
+                this.internalLinks = [];
+                initInternalLinks();
+            });
+        };
+
         bindBarButtonClick();
         initInternalLinks();
         bindScrollEvent();
+        bindResizeEvent();
 
         this.initialized = true;
     }
