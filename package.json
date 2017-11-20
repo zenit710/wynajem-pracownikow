@@ -17,9 +17,8 @@
     "gulp-clean-css": "^3.9.0",
     "gulp-cli": "^1.4.0",
     "gulp-concat": "^2.6.1",
-    "gulp-imageoptim": "^1.0.9",
+    "gulp-imagemin": "^4.0.0",
     "gulp-sass": "^3.1.0",
-    "gulp-sourcemaps": "^2.6.0",
-    "gulp-uglify": "^3.0.0"
+    "gulp-sourcemaps": "^2.6.0"
   }
 }

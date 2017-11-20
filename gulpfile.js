@@ -6,7 +6,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const babel = require("gulp-babel");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
-const imageOptim = require('gulp-imageoptim');
+const imagemin = require('gulp-imagemin');
 
 gulp.task("sass", function () {
     return gulp
@@ -52,7 +52,7 @@ gulp.task("minify-js", ["js"], function () {
 gulp.task("img", function () {
     return gulp
         .src("./src/img/**/*")
-        .pipe(imageOptim.optimize())
+        .pipe(imagemin())
         .pipe(gulp.dest("./dist/img"));
 });
 
