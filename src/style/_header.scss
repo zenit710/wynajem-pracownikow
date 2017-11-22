@@ -1,8 +1,9 @@
 body  > header {
-  background: url('../../img/main.jpg') center center;
+  background: url('../../img/main2.jpg') center center;
   background-size: cover;
   overflow: hidden;
   padding: 10rem 0;
+  margin-top: 77px;
 
   .row {
     text-align: center;
@@ -23,6 +24,7 @@ body  > header {
     height: 100vh;
     min-height: 600px;
     display: flex;
+    margin-top: 0;
 
     .wrapper {
       margin: auto;

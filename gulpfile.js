@@ -6,6 +6,7 @@ const sourcemaps = require("gulp-sourcemaps");
 const babel = require("gulp-babel");
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify");
+const imagemin = require('gulp-imagemin');
 
 gulp.task("sass", function () {
     return gulp
@@ -48,7 +49,14 @@ gulp.task("minify-js", ["js"], function () {
         .pipe(gulp.dest("./dist/js/internal"));
 });
 
-gulp.task("build", ["minify-css"]);
+gulp.task("img", function () {
+    return gulp
+        .src("./src/img/**/*")
+        .pipe(imagemin())
+        .pipe(gulp.dest("./dist/img"));
+});
+
+gulp.task("build", ["minify-css", "minify-js", "img"]);
 
 gulp.task("watch", function () {
     gulp.watch("./src/style/**/*.scss", ["sass"]);

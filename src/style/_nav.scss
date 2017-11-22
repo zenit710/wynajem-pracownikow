@@ -1,6 +1,10 @@
 .navbar {
   margin-bottom: 0;
   background-color: $menuBgColor;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
 
   nav {
     ul {
@@ -21,20 +25,13 @@
           &.mobile-bars {
             float: right;
             font-size: 40px;
+            color: $menuFontColorActive;
+            transition: color .3s;
+            padding-top: 18px;
 
-            &:active {
+            &:active, &.active {
               background: transparent;
-            }
-
-            a {
-              color: $menuFontColorActive;
-              transition: color .3s;
-            }
-
-            &.active {
-              a {
-                color: $menuFontColor;
-              }
+              color: $standardGrey;
             }
           }
         }

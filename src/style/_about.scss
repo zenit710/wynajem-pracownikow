@@ -13,6 +13,15 @@
       @include button($leadingColor, $leadingColorDark, #FFF)
     }
   }
+
+  i {
+    @include verticalCenter();
+    color: $leadingColor;
+  }
+
+  .description p {
+    @include verticalCenter();
+  }
 }
 
 #why-we {
@@ -29,5 +38,9 @@
     a {
       @include button(#FFF, #CCC, #000)
     }
+  }
+
+  ul {
+    list-style: none;
   }
 }
