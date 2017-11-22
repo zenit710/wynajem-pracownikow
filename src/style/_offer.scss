@@ -26,13 +26,17 @@
   padding: 8rem 0;
 
   .row {
-    h2, div, a {
+    h2, div, a, h3 {
       margin: 10px auto 10px auto;
     }
 
     a {
       @include button(#FFF, #CCC, #000)
     }
+  }
+
+  h3 {
+    font-size: 1.3rem;
   }
 
   .jobs {
