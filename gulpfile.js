@@ -22,30 +22,26 @@ gulp.task("sass", function () {
 gulp.task("minify-css", ["sass"], function () {
     return gulp
         .src("./dist/css/internal/style.css")
-        .pipe(sourcemaps.init())
         .pipe(cleanCSS())
-        .pipe(sourcemaps.write())
         .pipe(gulp.dest("dist/css/internal"));
 });
 
 gulp.task("js", function () {
     return gulp
         .src("./src/js/**/*.js")
-        .pipe(sourcemaps.init())
+        // .pipe(sourcemaps.init())
         .pipe(babel({
             presets: ["env"]
         }))
         .pipe(concat('scripts.js'))
-        .pipe(sourcemaps.write())
+        // .pipe(sourcemaps.write())
         .pipe(gulp.dest("./dist/js/internal"));
 });
 
 gulp.task("minify-js", ["js"], function () {
     return gulp
         .src("./dist/js/internal/scripts.js")
-        .pipe(sourcemaps.init())
         .pipe(uglify())
-        .pipe(sourcemaps.write())
         .pipe(gulp.dest("./dist/js/internal"));
 });
 
